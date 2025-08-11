@@ -9,7 +9,7 @@ from sklearn.compose import ColumnTransformer
 from imblearn.pipeline import Pipeline as ImbPipeline
 
 # set_page_config harus menjadi perintah Streamlit pertama setelah import
-st.set_page_config(page_title="Prediksi Risiko Kehamilan", layout="centered")
+st.set_page_config(page_title="Klasifikasi Risiko Kehamilan", layout="centered")
 
 
 # --- 1. Konfigurasi dan Pemuatan Model ---
@@ -81,8 +81,8 @@ with col2:
     status_gizi = st.selectbox("Status Gizi", ("Normal", "Kurang", "Lebih", "Obesitas", "Sangat Kurus"))
 
 # --- Tombol Prediksi (Sekarang di area utama) ---
-if st.button("Prediksi Risiko"): # Mengubah st.sidebar.button menjadi st.button
-    st.subheader("Hasil Prediksi:") # Mengubah subheader agar lebih umum
+if st.button("Klasifikasi Risiko"): # Mengubah st.sidebar.button menjadi st.button
+    st.subheader("Hasil Klasifikasi:") # Mengubah subheader agar lebih umum
     
     try:
         # Mengumpulkan input dalam bentuk DataFrame
@@ -120,7 +120,7 @@ if st.button("Prediksi Risiko"): # Mengubah st.sidebar.button menjadi st.button
         # --- AKHIR BAGIAN RULE-BASED YANG DIHAPUS ---
         
     except Exception as e:
-        st.error(f"Terjadi kesalahan saat memprediksi: {e}")
+        st.error(f"Terjadi kesalahan saat mengklasifikasi: {e}")
         st.info("Pastikan semua nilai input valid.")
 
 # --- Bagian Footer (bisa tetap di sidebar atau dipindahkan ke main area) ---
