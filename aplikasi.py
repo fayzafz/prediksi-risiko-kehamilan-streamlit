@@ -62,7 +62,7 @@ model, label_encoder, expected_model_features = load_artifacts()
 
 # --- 2. Antarmuka Streamlit ---
 st.title("🤰 Klasifikasi Risiko Kesehatan Ibu Hamil")
-st.markdown("Aplikasi ini menggunakan model Machine Learning (Extreme Gradient Boosting) untuk memprediksi tingkat risiko kesehatan ibu hamil berdasarkan parameter yang diberikan.")
+st.markdown("Aplikasi ini menggunakan model Machine Learning (Extreme Gradient Boosting) untuk mengklasifikasi tingkat risiko kesehatan ibu hamil berdasarkan parameter yang diberikan.")
 
 # --- PERUBAHAN DI SINI: Layout Input Menggunakan Kolom ---
 st.subheader("Harap masukkan nilai untuk setiap fitur di bawah ini:")
